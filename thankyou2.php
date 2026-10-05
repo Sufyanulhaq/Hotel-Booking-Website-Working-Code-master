@@ -38,7 +38,7 @@
 
 include 'src/Instamojo.php';
 
-$api = new Instamojo\Instamojo('f7532e18820a5caa9461b89f536213', 'bbadc5b47019237416c19c7ed3f9a5','https://www.instamojo.com/api/1.1/');
+$api = new Instamojo\Instamojo(getenv('INSTAMOJO_API_KEY'), getenv('INSTAMOJO_AUTH_TOKEN'),'https://www.instamojo.com/api/1.1/');
 
 $payid = $_GET["payment_request_id"];
 

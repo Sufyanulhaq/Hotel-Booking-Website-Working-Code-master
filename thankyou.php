@@ -119,7 +119,7 @@ extract($_REQUEST);
 
 include 'src/Instamojo.php';
 
-$api = new Instamojo\Instamojo('test_fa3b8408e230b86c2268bcc07', 'test_18461c0ac5022c63abdcffe78','https://test.instamojo.com/api/1.1/');
+$api = new Instamojo\Instamojo(getenv('INSTAMOJO_API_KEY'), getenv('INSTAMOJO_AUTH_TOKEN'),'https://test.instamojo.com/api/1.1/');
 
 $payid = $_GET["payment_request_id"];
 
